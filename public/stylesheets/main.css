@@ -1,0 +1,260 @@
+* html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+	background-color:#CCCCFF;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif; 
+  font-size:   12px;
+  line-height: 18px;
+  margin: 0px;
+  padding: 0px;
+}
+
+p {margin: 2px; padding: 2px;}
+
+ol, ul { padding: 1em 3em; }
+
+blockquote { 
+  background-color: #F9F7ED;
+  margin: 1em 1em;
+  padding: 1em 2em;
+}
+
+a:link		{ color: #333; text-decoration: none; }
+a:visited	{ color: #333; text-decoration: none; }
+a:active	{ color: #333; text-decoration: none; }
+
+table {
+  margin: 24px auto 12px auto;
+  width:100%;
+  border-collapse:collapse;
+  font-family: 'Lucida Grande', Tahoma, Arial, Helvetica, sans-serif;
+}
+
+th, td { padding: 0.1em 1em; }
+
+table tr th {
+  background:#505c65;
+  color:white;
+  font-size:0.8em;
+  border:1px solid #444;
+}
+
+table tr td {
+  background:#cadceb;
+  padding-top: 0;
+  border:1px solid #ddd;
+}
+
+table caption { 
+  font-size: 2em; 
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+input {
+	text-align: left;
+	margin: 0;
+}
+
+textarea {
+	text-align: left;
+	margin:0;
+}
+
+fieldset {
+	margin: 1em 0;
+	padding: 1em;
+	border: 1px solid #ccc;
+	background: #ecdad;
+}
+
+legend { font-weight: bold; }
+label { 
+	float: left;
+	width: 8em;
+	display:block; 
+}
+
+/* 自定义id */
+
+div#body {
+	width: 900px;
+	text-align:center;
+	margin: 8px auto 12px auto;
+}
+
+div#where {
+  display: block;
+  font-weight: bold;
+  text-align: left;
+}
+
+div#center {
+	border-left: #FFFFFF solid 6px;
+	border-right: #FFFFFF solid 6px;
+}
+
+div#header {
+  font-weight: bold;	
+  height: 130px;
+  margin: 6px auto 12px auto;
+}
+
+div#head {
+  height: 100px;
+  margin: 0 15% 0 15%;
+  background:url('/images/logo.png') 0 0 no-repeat;
+}
+
+div#navbar {
+	display:block;
+	background-color: #468bce;
+  	width: 100%;
+  	height: 32px;
+  	margin: 0 auto;
+  	padding: 0 auto;
+}
+
+div#navbar ul { 
+	list-style:none;
+	margin: 0 auto 0 auto;
+}
+
+div#navbar ul li {
+	float:left;
+	display:inline;
+	color: #000;
+}
+
+div#navbar ul li a {
+	display:block;
+	text-decoration:none;
+	width: 96px;
+	height: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+div#navbar ul a:link, a:visited { color: #FFF; }
+
+div#navbar ul a:hover { color: #333; background-color: #FFF;}
+
+div#content {
+	text-align:left;
+  	margin: 0 auto 24px auto;
+  	padding: 5px 16px 8px 16px;
+  	width: 800px;
+}
+
+div#foruminfo {
+    margin: 4px auto 0 auto;
+    padding: 0;
+}
+
+div#forumlist {}
+
+div#onlinebox {}
+
+div#legend {}
+
+div#content a:link { color: #000; }
+div#content a:visited { color: #000; }
+div#content a:hover {color: #666;}
+
+div#footer {
+  margin: 0 auto;
+  text-align:center;
+  clear:both;
+  color: #222;
+  font-size: 10px;
+  width: 800px;
+  height: 60px;
+  padding-bottom:10px;
+  margin-top:12px;
+}
+
+div#footer a {color: #222;}
+div#footer a:active {color: #444;}
+div#footer a:visited { color: #666; }
+div#footer a:hover { color: #999; }
+
+/* 自定义Classes */
+
+div.forum {}
+
+p.forumname {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+td.time { 
+  font-size: 0.8em;
+  line-height: 100%;
+}
+
+div.clear {clear:both;}
+
+td.post {
+  text-align: left;
+  padding-top:0px;
+}
+
+td.user {
+  text-align: left;
+  padding-top:0px;
+}
+
+td.topic_title {
+	text-align: left;
+}
+
+p.post_edit{
+ 	text-align:right;
+}
+
+table.forum_show {
+	text-align: center;
+}
+
+table.quickreply{
+	text-align: left;
+}
+
+td.forum{
+	text-align:left;
+}
+
+.submit { text-align: center; }
+
+.roubox {
+	background: url(/images/routl.png) no-repeat top left;
+}
+.routop {
+	background: url(/images/routr.png) no-repeat top right;
+}
+.roubottom {
+	background: url(/images/roubl.png) no-repeat bottom left;
+}
+.roubottom div {
+	background: url(/images/roubr.png) no-repeat bottom right;
+}
+.roucontent {
+	background: url(/images/rour.png) top right repeat-y;
+}
+
+.routop div,.routop,
+.roubottom div, .roubottom {
+	width: 100%;
+	height: 24px;
+	font-size: 1px;
+}
+.roucontent, .roubottom {
+	margin-top: -19px;
+}
+.roucontent { padding: 0 24px; }

@@ -1,0 +1,18 @@
+defaults: &defaults
+  adapter: mysql 
+  host: localhost 
+  socket: /var/lib/mysql/mysql.sock
+  username: root
+  password: password
+
+development:
+  database: wicked_development
+  <<: *defaults
+
+test:
+  database: wicked_test
+  <<: *defaults
+
+production:
+  database: wicked_production
+  <<: *defaults

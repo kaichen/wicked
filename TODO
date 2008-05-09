@@ -1,0 +1,32 @@
+Version 0.1.0
+
+==TODO: 
+ 
+ *add 版块属性 
+ *add 版块页帖子分页
+ *add 版块页回复分页
+ *add 首页显示论坛最新最热帖子
+ *add 后台管理界面
+ *add 简易管理员认证
+ *add 页面测试
+ *fix 表单的输入框对齐和大小问题
+ *add ......
+
+==DONE:
+
+ *add 帖子列出
+ *add 帖子回复列出
+ *add 论坛基本布局
+ *fix 页面被贴子的内容撑破
+ *add 完成控制器测试
+ *add 快速回复  
+ *add 论坛内的每个页面添加所在位置
+ *fix 帖子显示对齐问题
+ *add 帖子显示页面中模板化内容
+ *add 帖子创建和编辑表单模板化
+
+==Optional:
+ add fix change remove  
+ 
+
+   

@@ -1,0 +1,16 @@
+<a name="top"></a>
+<h2><%= @topic.title %></h2>
+<%= where %>
+<table width='100%' colspan="2">
+  <%= render(:partial => "topic", :object => @title) %>
+  <% for reply in @replies %>
+    <%= render(:partial => "reply", :object => reply) %>
+  <% end %>
+</table>
+
+<%= link_to "<img src='/images/post.gif' border='0' alt='发表新帖'/>", new_forum_topic_path(@topic.forum) %>
+<%= link_to "<img src='/images/reply.gif' border='0' alt='发表回复'/>", new_topic_reply_path(@topic) %>
+<a href='#quick_reply'><img src='/images/quickreply.gif' border='0' alt='快速回复'/></a><br/>
+
+<a name="quick_reply"></a>
+<%= render(:partial => "quick_reply") %>

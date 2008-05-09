@@ -1,0 +1,20 @@
+#== Wicked是什么？
+#   
+#   一个小型的Rails开源论坛，一个简洁的论坛系统；虽然小， 不过正如名字一样，Wicked有着自己“邪恶”的特性!
+# 
+# 
+#
+#== 怎样使用Wicked
+#
+#   环境：Ruby-1.8.6以上；Mysql-5.0.8数据库,Rails-2.0
+#   
+#   使用：
+#        自定义你的database.yml文件:cp config/database.example.yml config/database.yml
+#   
+#        载入schema: rake:schema:load
+#        
+#        启动：script/server
+#
+#
+
+

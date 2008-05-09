@@ -1,0 +1,25 @@
+<h2><%= @forum.name %></h2>
+<%= where %>
+<table class='forum_show' width="100%"  colspan="2">
+  <tr>
+    <th width="50%">标题</th>
+    <th width="7%">回复</th>
+    <th width="16%">发表时间</th>
+    <th width="10%">点击</th>
+    <th width="16%">最新回复</th>
+  </tr>
+
+<% for topic in @topics %>
+  <tr>
+    <td class='topic_title'><%=link_to topic.title, forum_topic_url(@forum,topic)%></td>
+    <td><%=h topic.replies.count %></td>
+    <td class='time'><%= show_time topic.created_at %></td>
+    <td><%= topic.hits %></td>
+    <td class='time'><%= show_time topic.last_post_time %></td>
+    <!-- <td><%= link_to '改', edit_topic_path(topic) %><%= link_to '删', topic, :confirm => 'Are you sure?', :method => :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<%= link_to "<img src='/images/post.gif' border='0' alt='发表新主题'/>", new_forum_topic_path(@forum) %>
+<!-- <%= link_to 'Edit', edit_forum_path(@forum) %> |<%= link_to 'Back', forums_path %> -->

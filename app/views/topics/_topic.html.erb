@@ -1,0 +1,23 @@
+<tr>
+  <th width='150px'>作者</td>
+  <th>正文</td>
+</tr>
+<tr>
+  <td align='left' valign="top" class='user'>
+    <a href='#'>管理员</a><br/>&nbsp;<br />
+    <img src='/images/user.jpg'/>
+  </td>
+  <td align='left' valign="top" class='post'>
+    <%=show_time(@topic.created_at) %>&nbsp;&nbsp;标题:<%=h @topic.title %> 
+    <hr width='98%'>
+    <p><%= RedCloth.new(@topic.body).to_html %></p>
+  </td>
+</tr>
+<tr>
+  <td><a href="#top">返回顶端</a></td>
+  <td>
+    <p class='post_edit'>
+      <%= link_to "<img src='/images/icon_edit.gif', border='0' , alt='编辑帖子' />", edit_topic_path(@topic) %>&nbsp;
+    </p>
+  </td>
+</tr>

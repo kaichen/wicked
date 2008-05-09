@@ -1,0 +1,4 @@
+<h1>创建帖子</h1>
+<%= render(:partial => 'form', :object => @topic) %>
+
+<%= link_to '返回论坛', forum_path(@topic.forum) %>

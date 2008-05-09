@@ -1,0 +1,11 @@
+<% form_for [@topic,@reply=Reply.new] do |f|%>  
+  <fieldset>
+    <p>
+      <label for='title'>标题</label><%= f.text_field :title,:width => "100%" %>
+    </p>
+    <p>
+      <label for='body'>内容</label><%= f.text_area :body,:rows=> 5%>
+    </p>  
+    <p><div class='submit'><%= f.submit '回复' %></p>   
+  </fieldset>
+ <% end %>  

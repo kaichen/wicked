@@ -1,0 +1,19 @@
+<tr>
+  <td align='left' valign="top" class='user'>
+    <a href='#'>管理员</a><br/>&nbsp;<br />
+    <img src='/images/user.jpg'/>
+  </td>
+  <td align='left' valign="top" class='post'>
+    <%= show_time reply.created_at %>&nbsp;&nbsp;标题:<%=h reply.title %> 
+    <hr width='98%'>
+    <p><%=sanitize reply.body %></p>
+  </td>
+</tr>
+<tr>
+  <td><a href="#top">返回顶端</a></td>
+  <td>
+    <p class='post_edit'> 
+      <%= link_to "<img src='/images/icon_edit.gif', border='0' , alt='编辑回复'/>",edit_topic_reply_path(@topic, reply) %>
+    </p>
+  </td>
+</tr>

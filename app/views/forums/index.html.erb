@@ -1,0 +1,26 @@
+<%= where %>
+
+<table>
+  <tr>
+    <th width="60%">论坛</th>
+    <th width="8%">主题</th>
+    <th width="8%">文章</th>
+    <th width="25%">最后回复</th>
+  </tr>
+
+<% for forum in @forums %>
+  <tr>
+    <td class='forum'><b><%=link_to forum.name, forum %></b><br \>
+      <%=h forum.description %></td>
+    <td><%= forum.topics_count %></td>
+    <td><%= forum.replies_count + forum.topics_count %></td>
+    <td></td>
+    <!-- <td>
+    <%= link_to 'S', forum %>|<%= link_to 'E', edit_forum_path(forum) %>|<%= link_to 'D', forum, :confirm => 'Are you sure?', :method => :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New forum', new_forum_path %>
