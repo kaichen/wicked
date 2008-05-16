@@ -1,3 +1,13 @@
-Go to forums
-
-Go to ...
+最新帖子TOP10
+<ol class='topics'>
+<% for topic in @recent_topics %>
+  <li><%=link_to topic.title, topic %> - <%= show_time(topic.created_at) %></li>
+<% end %>
+</ol>
+<hr/>
+最热帖子TOP10
+<ol class='topics'>
+<% for topic in @hot_topics %>
+  <li><%=link_to topic.title, topic %> - <%= topic.hits %></li>
+<% end %>
+</ol>

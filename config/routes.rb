@@ -6,4 +6,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :forums, :has_many => :topics
   map.resources :topics, :has_many => :replies, :member=>{ :create=>:post }
 
+  map.connect 'site/:action', :controller => 'site'
+
 end

@@ -15,5 +15,6 @@ describe "/forums/index.html.erb" do
   it "应该渲染/forums/index.html.erb模板" do
     render "/forums/index.html.erb"
   end
+
 end
 

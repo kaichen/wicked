@@ -7,43 +7,45 @@
   <%= stylesheet_link_tag 'main' %>
 </head>
 <body>
-
 <div id='body'>
   <div class="roubox">
   <div class="routop"><div></div></div>
     <div class="roucontent">
+      <!-- Header -->
   	  <div id='header'>
-      <div id='head'><span></span></div>
-      <div id="navbar">
-        <ul>
-          <li class="but"><span><%= link_to '首页', root_path %></span></li>
-          <li class="but"><span><a href="#"><strong>交流</strong></a></span></li>
-          <li class="but"><span><a href="#"><strong>WIKI</strong></a></span></li>
-          <li class="but"><span><a href="#"><strong>Credits</strong></a></span></li>
-          <li class="but"><span><%= link_to '开发团队', teams_path %></span></li>
-          <li class="but"><span><%= link_to '论坛', forums_path %></span></li>
-          <li class="but"><span><%= link_to '留言', teams_path %></span></li>
-          <li class="but"><span><%= link_to '关于', about_path %></span></li>
-      	</ul>
-      </div>
-  	</div>
+        <div id='head'><span></span></div>
+        <div id="navbar">
+          <ul>
+            <li class="but"><span><%= link_to '首页', root_path %></span></li>
+            <li class="but"><span><a href="#"><strong>新闻</strong></a></span></li>
+            <li class="but"><span><a href="#"><strong>产品展示</strong></a></span></li>
+            <li class="but"><span><a href="#"><strong>Credits</strong></a></span></li>
+            <li class="but"><span><%= link_to '开发团队', teams_path %></span></li>
+            <li class="but"><span><%= link_to '论坛', forums_path %></span></li>
+            <li class="but"><span><%= link_to '留言', teams_path %></span></li>
+            <li class="but"><span><%= link_to '关于', about_path %></span></li>
+          </ul>
+        </div>
+  	  </div>
+      <!-- Content -->
       <div id='content'>
         <p style="color: green"><%= flash[:notice] %></p>	
         <%= yield  %>
       </div>
-	</div>
+    </div>
    <div class="roubottom"><div></div></div>
+  </div>
 </div>
+<!-- Footer -->
+<div id='footer'>
+  <div class="footlinks">
+    &copy;2007 - 2008 流萤科技团 - <a href="#">Home</a> 
+              - <a href="#">Privacy Policy</a> - <a href="#">Site Directory</a>
+  </div>
+  <p>Technology by Ruby on Rails, Rspec, Apache.</p>
+  <p>Power by <a href="mailto:chenk85@gmail.com">maninred</a> 
+  and <a href='mailto:ysorigin@gmail'>Ragnarok</a></p>
 </div>
-
-		<div id='footer'>
-			<div class="footlinks">
-				&copy;2007 - 2008 流萤科技团 - <a href="#">Home</a> - 
-            <a href="#">Privacy Policy</a> - <a href="#">Site Directory</a>
-          </div>
-          <p>Technology by Ruby on Rails, Rspec, Apache.</p>
-          <p>Power by <a href="mailto:chenk85@gmail.com">maninred</a> and <a href='mailto:ysorigin@gmail'>Ragnarok</a></p>
-		</div>
 
 </body>
 </html>
