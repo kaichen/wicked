@@ -61,4 +61,10 @@ describe Topic do
     options.merge!({:body => 'testingtesingtesting'})
     topic.do_reply(options)
   end
+  
+  it "should be sticky"do
+   topic = Topic.new(:sticky => 1)
+   topic.sticky?.should be true
+  end
+
 end

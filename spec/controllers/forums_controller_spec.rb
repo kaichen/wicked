@@ -43,6 +43,7 @@ describe ForumsController do
       @forum.should_receive(:topics).and_return(@topics)
       @topics.should_receive(:sort_by).and_return(@topics)
       @topics.should_receive(:reverse).and_return(@topics)
+      @topics.should_receive(:paginate).with(:per_page => 15, :page => 1).and_return(@topics)
 
     end
   

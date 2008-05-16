@@ -12,5 +12,11 @@
 <%= link_to "<img src='/images/reply.gif' border='0' alt='发表回复'/>", new_topic_reply_path(@topic) %>
 <a href='#quick_reply'><img src='/images/quickreply.gif' border='0' alt='快速回复'/></a><br/>
 
+<%= will_paginate @replies,{
+    :prev_label => '上一页',
+    :next_label => '下一页',
+    :update => 'replies',
+    }%>
+
 <a name="quick_reply"></a>
 <%= render(:partial => "quick_reply") %>

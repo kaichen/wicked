@@ -1,13 +1,16 @@
 <%= error_messages_for :topic %>
 
 <% form_for(@topic) do |form| %>
+
   <p>
-    <label for='title'>标题</label><%= form.text_field :title, :width => "100%" %>
-  </p>
+  <label for='title'>标题</label><%= form.text_field :title, :width => "100%" %>
+  <%= form.check_box :sticky %> 置顶 </p>
+
   <%= form.hidden_field :forum_id %>
   <p>
     <label for='body'>内容</label><%= form.text_area :body, :rows=> 5, :width => '350px' %>
   </p>  
+
   <p>
   <%= form.submit "提交"%>
   </p>

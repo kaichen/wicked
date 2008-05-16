@@ -8,6 +8,7 @@ describe "/topics/edit.html.erb" do
                         :body => 'bodybodybodybodybody') 
     @topic.stub!(:forum_id)
     @topic.stub!(:forum).and_return(Forum.new)
+    @topic.should_receive(:sticky).and_return(true)
     assigns[:topic] = @topic
   end
 

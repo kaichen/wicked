@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "forums", :force => true do |t|
     t.string   "name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 6) do
     t.datetime "updated_at"
     t.integer  "replies_count", :default => 0
     t.integer  "hits",          :default => 0
+    t.integer  "sticky"
   end
 
 end

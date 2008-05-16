@@ -12,6 +12,10 @@ class Topic < ActiveRecord::Base
     end
   end
 
+  def sticky? 
+    self.sticky == 1
+  end
+
   def replies_count
     replies.size
   end

@@ -16,8 +16,17 @@ describe "/forums/show.html.erb视图模板" do
     @topic.replies.stub!(:count)
     @topic.stub!(:hits)
     @topic.stub!(:last_post_time).and_return(Time.now)
+    @topic.should_receive(:sticky?).and_return(true)
+    @topics = mock([@topic])
+    @topics.should_receive(:page_count).and_return(5)
+    @topics.should_receive(:each).and_return(@topic)
+    @topics.should_receive(:current_page).and_return(0)
+    @topics.stub!(:previous_page).and_return(0)
+    @topics.stub!(:next_page).and_return(2)
+
+    assigns[:topics] = @topics
     assigns[:forum] = @forum
-    assigns[:topics] = [@topic]
+    
   end
 
   it "应该渲染对应模板" do

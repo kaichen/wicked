@@ -12,6 +12,7 @@ describe TopicsController do
       @topic.replies.stub!(:sort_by)
       Topic.stub!(:find).with(anything()).and_return(@topic)
       @params = {:id => @topic.id}
+      
     end
   
     def do_get

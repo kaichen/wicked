@@ -12,8 +12,8 @@ class ForumsController < ApplicationController
   # GET /forums/1.xml
   def show
     @forum = Forum.find(params[:id],:include=>:topics)
-    @topics =@forum.topics.sort_by{|x| x.last_post_time}.reverse
-
+    #@topics =@forum.topics.sort_by{|x| x.last_post_time}.reverse
+    @topics = @forum.topics.sort_by{|x|x.last_post_time}.reverse.paginate(:page => params[:page]||1, :per_page => 15)    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @forum }

@@ -12,6 +12,7 @@ describe "/topics/new.html.erb" do
     @topic.stub!(:title).and_return("MyString")
     @topic.stub!(:body).and_return("MyText")
     @topic.stub!(:forum).and_return(Forum.new)
+    @topic.stub!(:sticky).and_return(true)
     assigns[:topic] = @topic
   end
 
