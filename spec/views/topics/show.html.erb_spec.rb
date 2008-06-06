@@ -4,10 +4,11 @@ describe "/topics/show.html.erb" do
   include TopicsHelper
   
   before(:each) do
-    @topic = mock_model(Topic, :title => "new topic", 
+    @topic = stub_model(Topic, :title => "new topic", 
     :body => "new topic", 
     :created_at => Time.now)
-    @replies = [mock_model(Reply, :title => 'test', :body => 'bodybodybody', :created_at => Time.now)]
+    @replies = [stub_model(Reply, :title => 'test', :body => 'bodybodybody', :created_at => Time.now)]
+    @replies.stub!(:total_pages).and_return(1)
     @topic.stub!(:forum).and_return(Forum.new)
     assigns[:topic] = @topic
     assigns[:replies] = @replies

@@ -203,6 +203,7 @@ div.clear {clear:both;}
 td.post {
   text-align: left;
   padding-top:0px;
+  width: 600px;
 }
 
 td.user {

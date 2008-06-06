@@ -11,7 +11,6 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
     @replies = @topic.replies.paginate :page => params[:page] || 1,:per_page=> 20
-
     respond_to do |format|
       @topic.hit!
       format.html # show.html.erb

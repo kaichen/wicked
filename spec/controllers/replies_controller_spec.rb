@@ -1,8 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe RepliesController do
-  controller_name :repies
-
 
   describe "处理 GET topic/1/replies/new" do
 
